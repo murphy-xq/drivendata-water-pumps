@@ -107,8 +107,8 @@ So, let’s inspect the categorical variables to start: we see that there
 are sets of very similar variables, e.g. `extraction_type`,
 `extraction_type_class`, and `extraction_type_group`. As you see below,
 the `extraction` variables provide finer degrees of specification moving
-from `*_class` to `*_type`. Retaining sligh variations of the same
-feature will likely adversely affect the model’s performance so we could
+from `*_class` to `*_type`. Retaining slight variations of the same
+feature may adversely affect the model’s performance so we could
 consider recoding or collapsing the factor levels and dropping related
 variables altogether.
 
@@ -496,7 +496,7 @@ h2o.confusionMatrix(model_aml)
 #> non functional                1347                      80          21397 0.0625 = 1,427 / 22,824
 #> Totals                       33960                    3384          22056 0.0524 = 3,112 / 59,400
 
-h2o.varimp(model_aml) %>% head(n=20)
+h2o.varimp(model_aml) %>% head(n = 20)
 #> Variable Importances: 
 #>                                     variable relative_importance scaled_importance percentage
 #> 1                               quantity.dry        52270.410156          1.000000   0.093559
