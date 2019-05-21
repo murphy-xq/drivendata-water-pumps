@@ -74,7 +74,7 @@ train_dta  <- read_csv(here("data","training-set_values.csv")) %>% mutate(type =
 skim(train_dta)
 ```
 
-Alright, now we have a sense of the data and we can start sorting out what kind of preprocessing and feature engineering might be warranted. So, let's inspect the categorical variables to start: we see that there are sets of very similar variables, e.g. `extraction_type`, `extraction_type_class`, and `extraction_type_group`. As you see below, the `extraction` variables provide finer degrees of specification moving from `*_class` to `*_type`. Retaining sligh variations of the same feature will likely adversely affect the model's performance so we could consider recoding or collapsing the factor levels and dropping related variables altogether.
+Alright, now we have a sense of the data and we can start sorting out what kind of preprocessing and feature engineering might be warranted. So, let's inspect the categorical variables to start: we see that there are sets of very similar variables, e.g. `extraction_type`, `extraction_type_class`, and `extraction_type_group`. As you see below, the `extraction` variables provide finer degrees of specification moving from `*_class` to `*_type`. Retaining slight variations of the same feature may adversely affect the model's performance so we could consider recoding or collapsing the factor levels and dropping related variables altogether.
 
 ```{r}
 train_dta %>% 
